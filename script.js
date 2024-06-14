@@ -25,7 +25,7 @@ btnCheckEl.addEventListener("click", () => {
     secretNum = Math.floor(Math.random() * 100) + 1;
     attemptsEl.textContent = attempts;
     hideNumEl.textContent = "?";
-    hideNumEl.style.width = "25%";
+    hideNumEl.style.width = "50%";
     hideNumEl.style.transition = "all 0.5s ease-in";
     hideNumEl.value = "";
     containerEl.style.backgoundColor = "#ddd";
@@ -43,7 +43,9 @@ btnCheckEl.addEventListener("click", () => {
           guess > secretNum ? " OOps!! Too high! 🤯" : "Whoops!! Too low! 🤔";
         attemptsEl.textContent = `Number of  attempts:: ${attempts}`;
       } else {
-        displayMessage("You lost the game! 🤦‍♂️");
+        displayMessage(
+          "You've lost the game! 🤦‍♂️,the secret number is " + "" + "" + secretNum
+        );
         msgEl.style.color = "#ff0000";
         containerEl.style.backgoundColor = "#fff";
         attemptsEl.textContent = 0;
